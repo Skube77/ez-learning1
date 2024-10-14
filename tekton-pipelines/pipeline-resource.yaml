@@ -1,0 +1,11 @@
+apiVersion: tekton.dev/v1alpha1
+kind: PipelineResource
+metadata:
+  name: ez-learning-git
+spec:
+  type: git
+  params:
+    - name: url
+      value: https://github.com/Skube77/ez-learning
+    - name: revision
+      value: main

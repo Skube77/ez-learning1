@@ -1,0 +1,23 @@
+apiVersion: tekton.dev/v1beta1
+kind: Pipeline
+metadata:
+  name: ez-learning-pipeline
+spec:
+  resources:
+    - name: source-repo
+      type: git
+  tasks:
+    - name: fetch-source
+      taskRef:
+        name: git-clone
+      resources:
+        inputs:
+          - name: source
+            resource: source-repo
+    - name: build-image
+      taskRef:
+        name: build-ez-learning
+    - name: deploy
+      taskRef:
+        name: deploy-ez-learning
+      runAfter: [build-image]
