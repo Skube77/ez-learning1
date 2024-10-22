@@ -73,17 +73,6 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-        <dependencies>
-    <!-- Autres dépendances existantes -->
-
-    <dependency>
-        <groupId>org.postgresql</groupId>
-        <artifactId>postgresql</artifactId>
-        <version>42.5.4</version>
-    </dependency>
-
-    <!-- Autres dépendances existantes -->
-</dependencies>
     </dependencies>
 
     <build>
